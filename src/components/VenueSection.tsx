@@ -17,11 +17,10 @@ import { CornerFlourish, FloralDivider } from "./Ornaments";
 export default function VenueSection() {
   const [copied, setCopied] = useState(false);
 
+  const venueName = "Illikkal Convention Center";
   const venueAddress =
-    "Chudalappra, Puthuparamba Rd, Chudalappara, Keralam 676501";
-  const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-    venueAddress
-  )}`;
+    "Illikkal Convention Center, Chudalappra, Puthuparamba Rd, Chudalappara, Kerala 676501";
+  const googleMapsUrl = "https://maps.app.goo.gl/egGVsMvbf6EXfVQk6?g_st=ac";
 
   const handleCopyAddress = () => {
     navigator.clipboard.writeText(venueAddress);
@@ -76,14 +75,14 @@ export default function VenueSection() {
             </div>
 
             <h3 className="text-2xl md:text-4xl font-serif text-[#132E22] mb-3 leading-snug">
-              Chudalappara
+              Illikkal Convention Center
             </h3>
 
             <p className="text-base md:text-lg text-[#3E3830] font-sans font-medium mb-1">
-              Puthuparamba Rd, Chudalappara
+              Chudalappra, Puthuparamba Rd
             </p>
             <p className="text-sm text-[#706456] font-sans mb-6">
-              Keralam 676501, India
+              Chudalappara, Kerala 676501, India
             </p>
 
             {/* Event Itinerary Badges */}
@@ -96,7 +95,7 @@ export default function VenueSection() {
                   11:00 AM
                 </p>
                 <p className="text-xs text-[#706456] mt-0.5 font-sans">
-                  Holy Nuptial Vows &amp; Blessing
+                  Wedding Vows &amp; Ring Exchange
                 </p>
               </div>
 
@@ -108,7 +107,7 @@ export default function VenueSection() {
                   12:00 PM Onwards
                 </p>
                 <p className="text-xs text-[#706456] mt-0.5 font-sans">
-                  Lunch, Music &amp; Fellowship
+                  Lunch &amp; Fellowship
                 </p>
               </div>
             </div>
@@ -160,35 +159,36 @@ export default function VenueSection() {
           className="lg:col-span-5 flex flex-col justify-between gap-4"
         >
           {/* Interactive Map Preview Card */}
-          <div className="relative rounded-2xl overflow-hidden glass-card border border-[#C5A059]/40 p-4 shadow-lg shadow-[#132E22]/5">
+          <a
+            href={googleMapsUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Open Illikkal Convention Center on Google Maps"
+            className="group relative rounded-2xl overflow-hidden glass-card border border-[#C5A059]/40 p-4 shadow-lg shadow-[#132E22]/5 block hover:border-[#C5A059] transition-all duration-300 hover:shadow-xl"
+          >
             <div className="relative w-full h-56 rounded-xl overflow-hidden bg-gradient-to-br from-[#1E4D3A] via-[#132E22] to-[#0D261A] flex flex-col items-center justify-center p-6 text-center text-[#FAF7F2]">
               {/* Subtle Map Grid lines */}
               <div className="absolute inset-0 opacity-15 pointer-events-none bg-[radial-gradient(#E5CD8B_1px,transparent_1px)] [background-size:16px_16px]" />
 
               <div className="relative z-10 flex flex-col items-center">
-                <div className="w-14 h-14 rounded-full bg-[#E5CD8B]/20 backdrop-blur-md flex items-center justify-center mb-3 border border-[#E5CD8B]/60 shadow-lg animate-bounce">
+                <div className="w-14 h-14 rounded-full bg-[#E5CD8B]/20 backdrop-blur-md flex items-center justify-center mb-3 border border-[#E5CD8B]/60 shadow-lg group-hover:scale-110 group-hover:bg-[#E5CD8B]/30 transition-all duration-300 animate-bounce">
                   <MapPin className="w-7 h-7 text-[#E5CD8B]" />
                 </div>
 
                 <p className="font-serif text-xl font-normal text-[#E5CD8B] tracking-wide mb-1">
-                  Chudalappara, Kerala
+                  Illikkal Convention Center
                 </p>
                 <p className="text-xs text-[#E6EFEA]/80 font-sans max-w-xs mb-4">
-                  PIN: 676501 • Puthuparamba Rd
+                  Chudalappara, Kerala • PIN: 676501
                 </p>
 
-                <a
-                  href={googleMapsUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-white/20 hover:bg-white/30 text-white text-xs font-sans tracking-wide transition-colors backdrop-blur-sm border border-white/30"
-                >
-                  <span>View Satellite &amp; Directions</span>
+                <span className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-white/20 group-hover:bg-white/30 text-white text-xs font-sans tracking-wide transition-colors backdrop-blur-sm border border-white/30">
+                  <span>View Hall on Google Maps</span>
                   <ExternalLink className="w-3 h-3" />
-                </a>
+                </span>
               </div>
             </div>
-          </div>
+          </a>
 
           {/* Travel Assistance Card */}
           <div className="glass-card rounded-2xl p-5 border border-[#C5A059]/40 text-xs text-[#524B42] space-y-3">

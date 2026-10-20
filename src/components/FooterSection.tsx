@@ -25,9 +25,15 @@ export default function FooterSection() {
           forever in love.&rdquo;
         </p>
 
-        <p className="text-xs uppercase tracking-[0.25em] text-[#85642B] font-medium font-sans mt-3">
-          January 16, 2027 • Chudalappara, Kerala
-        </p>
+        <a
+          href="https://maps.app.goo.gl/egGVsMvbf6EXfVQk6?g_st=ac"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="Open Illikkal Convention Center in Google Maps"
+          className="text-xs uppercase tracking-[0.25em] text-[#85642B] hover:text-[#132E22] font-medium font-sans mt-3 inline-flex items-center gap-1 transition-colors"
+        >
+          <span>January 16, 2027 • Illikkal Convention Center, Kerala</span>
+        </a>
 
         <div className="mt-6 inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-[#132E22] text-[#E5CD8B] text-xs font-serif tracking-widest uppercase shadow">
           <span>#MarshlinWedsBensiya</span>

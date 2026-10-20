@@ -151,12 +151,18 @@ export default function HeroSection() {
             </span>
           </div>
 
-          <div className="flex items-center gap-2 px-4 py-2 rounded-full glass-card border border-[#C5A059]/40 shadow-sm">
-            <MapPin className="w-4 h-4 text-[#AA8440]" />
+          <a
+            href="https://maps.app.goo.gl/egGVsMvbf6EXfVQk6?g_st=ac"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Open Illikkal Convention Center on Google Maps"
+            className="flex items-center gap-2 px-4 py-2 rounded-full glass-card border border-[#C5A059]/40 shadow-sm hover:border-[#C5A059] hover:bg-[#FAF7F2] transition-all hover:scale-105 active:scale-95 cursor-pointer text-[#132E22] group"
+          >
+            <MapPin className="w-4 h-4 text-[#AA8440] group-hover:text-[#132E22] transition-colors" />
             <span className="font-medium tracking-wide">
-              Chudalappara, Kerala
+              Illikkal Convention Center, Kerala
             </span>
-          </div>
+          </a>
         </motion.div>
 
         {/* Action Buttons: Save the Date + RSVP */}

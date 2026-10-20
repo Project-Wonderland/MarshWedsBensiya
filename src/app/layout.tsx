@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Cormorant_Garamond, Montserrat, Alex_Brush } from "next/font/google";
+import DevtoolsIndicatorOrnament from "@/components/DevtoolsIndicatorOrnament";
 import "./globals.css";
 
 const cormorant = Cormorant_Garamond({
@@ -34,10 +35,21 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   title: "Gnana Bensiya & Arun Marshlin | Wedding Celebration",
   description:
-    "Together with their families, Gnana Bensiya & Arun Marshlin joyfully invite you to celebrate their wedding on January 16, 2027 at Chudalappara, Kerala.",
+    "Together with their families, Gnana Bensiya & Arun Marshlin joyfully invite you to celebrate their wedding on January 16, 2027 at Illikkal Convention Center, Chudalappara, Kerala.",
+  icons: {
+    icon: [
+      { url: "/icon.svg", type: "image/svg+xml" },
+      { url: "/favicon.ico", sizes: "any" },
+    ],
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180" },
+      { url: "/apple-icon.svg", type: "image/svg+xml" },
+    ],
+    shortcut: "/icon.svg",
+  },
   openGraph: {
     title: "Gnana Bensiya & Arun Marshlin - Wedding Invitation",
-    description: "Save the Date: January 16, 2027 • Chudalappara, Kerala",
+    description: "Save the Date: January 16, 2027 • Illikkal Convention Center, Kerala",
     type: "website",
     locale: "en_US",
     siteName: "Gnana & Arun Wedding",
@@ -55,6 +67,7 @@ export default function RootLayout({
       className={`${cormorant.variable} ${alexBrush.variable} ${montserrat.variable} scroll-smooth`}
     >
       <body className="min-h-screen bg-[#FAF7F2] text-[#242424] font-sans antialiased selection:bg-[#C5A059]/20 selection:text-[#132E22]">
+        <DevtoolsIndicatorOrnament />
         {children}
       </body>
     </html>

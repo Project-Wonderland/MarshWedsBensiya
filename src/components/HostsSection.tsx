@@ -99,7 +99,7 @@ export default function HostsSection() {
           </span>
 
           <h3 className="text-2xl md:text-3xl font-serif text-[#132E22] mb-3 leading-snug">
-            Vincent Balaraj <br />
+            Vincent Paulraj <br />
             <span className="text-lg md:text-xl font-light text-[#AA8440] italic font-serif">
               &amp;
             </span>{" "}

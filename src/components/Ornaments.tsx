@@ -13,7 +13,7 @@ export function MonogramBadge({ className = "" }: { className?: string }) {
           <span className="font-serif text-lg md:text-xl font-light text-[#E5CD8B] tracking-widest flex items-center gap-0.5">
             <span>A</span>
             <span className="text-xs font-script text-[#C5A059] italic px-0.5">&amp;</span>
-            <span>G</span>
+            <span>B</span>
           </span>
           <span className="text-[9px] uppercase tracking-[0.25em] text-[#C5A059]/80 font-sans mt-0.5">
             2027

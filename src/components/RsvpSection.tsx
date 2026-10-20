@@ -22,13 +22,7 @@ interface Blessing {
 }
 
 const DEFAULT_BLESSINGS: Blessing[] = [
-  {
-    id: "1",
-    name: "Uncle Joseph & Family",
-    attendance: "attending",
-    message: "Wishing Gnana & Arun a lifetime of divine grace, boundless joy, and eternal love!",
-    timestamp: "Just now",
-  },
+
   {
     id: "2",
     name: "Dr. Maria & Family",
@@ -94,8 +88,8 @@ export default function RsvpSection() {
 
   const handleShareWhatsApp = () => {
     const text = encodeURIComponent(
-      "✨ You're warmly invited! Celebrate the wedding of Gnana Bensiya & Arun Marshlin on Saturday, January 16, 2027 in Chudalappara, Kerala. View the digital invitation here: " +
-        (typeof window !== "undefined" ? window.location.href : "")
+      "✨ You're warmly invited! Celebrate the wedding of Gnana Bensiya & Arun Marshlin on Saturday, January 16, 2027 at Illikkal Convention Center, Chudalappara, Kerala. View the digital invitation here: " +
+      (typeof window !== "undefined" ? window.location.href : "")
     );
     window.open(`https://api.whatsapp.com/send?text=${text}`, "_blank");
   };
@@ -194,22 +188,20 @@ export default function RsvpSection() {
                   <button
                     type="button"
                     onClick={() => setAttendance("attending")}
-                    className={`px-3 py-2.5 rounded-xl text-xs font-medium border text-center transition ${
-                      attendance === "attending"
+                    className={`px-3 py-2.5 rounded-xl text-xs font-medium border text-center transition ${attendance === "attending"
                         ? "bg-[#132E22] text-[#FAF7F2] border-[#132E22] shadow"
                         : "bg-white/80 text-[#524B42] border-[#C5A059]/30 hover:bg-[#FAF7F2]"
-                    }`}
+                      }`}
                   >
                     Joyfully Attending 🤍
                   </button>
                   <button
                     type="button"
                     onClick={() => setAttendance("afar")}
-                    className={`px-3 py-2.5 rounded-xl text-xs font-medium border text-center transition ${
-                      attendance === "afar"
+                    className={`px-3 py-2.5 rounded-xl text-xs font-medium border text-center transition ${attendance === "afar"
                         ? "bg-[#132E22] text-[#FAF7F2] border-[#132E22] shadow"
                         : "bg-white/80 text-[#524B42] border-[#C5A059]/30 hover:bg-[#FAF7F2]"
-                    }`}
+                      }`}
                   >
                     Wishing from Afar 🕊️
                   </button>

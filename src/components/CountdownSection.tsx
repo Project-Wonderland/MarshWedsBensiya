@@ -3,9 +3,9 @@
 import { useState, useEffect } from "react";
 import Countdown, { CountdownRenderProps } from "react-countdown";
 import { motion } from "framer-motion";
-import { Clock, CalendarPlus, Sparkles, Download } from "lucide-react";
+import { Clock, CalendarPlus, Sparkles } from "lucide-react";
 import { triggerConfetti, triggerGoldenShower } from "@/lib/confetti";
-import { generateGoogleCalendarUrl, downloadIcsFile } from "@/lib/calendar";
+import { generateGoogleCalendarUrl } from "@/lib/calendar";
 import { FloralDivider } from "./Ornaments";
 
 function CountdownUnit({ value, label }: { value: number; label: string }) {
@@ -134,15 +134,6 @@ export default function CountdownSection() {
             <CalendarPlus className="w-4 h-4 text-[#AA8440]" />
             <span>Google Calendar</span>
           </a>
-
-          <button
-            onClick={downloadIcsFile}
-            type="button"
-            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full glass-card hover:bg-[#F3ECE2] text-[#132E22] font-medium text-xs sm:text-sm tracking-wide border border-[#C5A059]/40 shadow-sm transition-all duration-300 active:scale-95"
-          >
-            <Download className="w-4 h-4 text-[#AA8440]" />
-            <span>Save .ICS File</span>
-          </button>
         </div>
       </motion.div>
     </section>
